@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Itahari FoodStalls - Academic Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="project-banner">
+    This website is created for Academic Project Work – Not a Real Business
+</div>
+
+<header>
+    <h1>Local FoodStalls in Itahari</h1>
+    <p>Promoting Local Taste Through Technology</p>
+</header>
+
+<input type="text" id="search" placeholder="Search foodstall..." onkeyup="searchFoodstall()">
+
+<div class="container" id="foodList">
+
+    <div class="card">
+        <h2>Newa Khaja Ghar</h2>
+        <img src="chatamari.jpg" class="food-img" alt="Chatamari">
+        <p>Location: Itahari Chowk</p>
+        <p>Special: Chatamari, Bara</p>
+        <p>Price: Rs. 150 - 300</p>
+        <div class="rating">
+            <span onclick="rate(this,0)">☆</span>
+            <span onclick="rate(this,1)">☆</span>
+            <span onclick="rate(this,2)">☆</span>
+            <span onclick="rate(this,3)">☆</span>
+            <span onclick="rate(this,4)">☆</span>
+        </div>
+        <p class="avg-rating">Average: 0</p>
+        <div class="review-section">
+            <input type="text" class="review-input" placeholder="Write a review">
+            <button onclick="addReview(this)">Submit</button>
+            <div class="reviews-list"></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Street Momo Center</h2>
+        <img src="momo.jpg" class="food-img" alt="Momo">
+        <p>Location: College Road</p>
+        <p>Special: Buff Momo, Chicken Momo</p>
+        <p>Price: Rs. 120 - 200</p>
+        <div class="rating">
+            <span onclick="rate(this,0)">☆</span>
+            <span onclick="rate(this,1)">☆</span>
+            <span onclick="rate(this,2)">☆</span>
+            <span onclick="rate(this,3)">☆</span>
+            <span onclick="rate(this,4)">☆</span>
+        </div>
+        <p class="avg-rating">Average: 0</p>
+        <div class="review-section">
+            <input type="text" class="review-input" placeholder="Write a review">
+            <button onclick="addReview(this)">Submit</button>
+            <div class="reviews-list"></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Lassi Pasal</h2>
+        <img src="lassi.jpg" class="food-img" alt="Lassi">
+        <p>Location: Bus Park</p>
+        <p>Special: Sweet Lassi, Mango Lassi</p>
+        <p>Price: Rs. 80 - 150</p>
+        <div class="rating">
+            <span onclick="rate(this,0)">☆</span>
+            <span onclick="rate(this,1)">☆</span>
+            <span onclick="rate(this,2)">☆</span>
+            <span onclick="rate(this,3)">☆</span>
+            <span onclick="rate(this,4)">☆</span>
+        </div>
+        <p class="avg-rating">Average: 0</p>
+        <div class="review-section">
+            <input type="text" class="review-input" placeholder="Write a review">
+            <button onclick="addReview(this)">Submit</button>
+            <div class="reviews-list"></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Chowmein Corner</h2>
+        <img src="chowmein.jpg" class="food-img" alt="Chowmein">
+        <p>Location: Main Market</p>
+        <p>Special: Veg Chowmein, Chicken Chowmein</p>
+        <p>Price: Rs. 100 - 200</p>
+        <div class="rating">
+            <span onclick="rate(this,0)">☆</span>
+            <span onclick="rate(this,1)">☆</span>
+            <span onclick="rate(this,2)">☆</span>
+            <span onclick="rate(this,3)">☆</span>
+            <span onclick="rate(this,4)">☆</span>
+        </div>
+        <p class="avg-rating">Average: 0</p>
+        <div class="review-section">
+            <input type="text" class="review-input" placeholder="Write a review">
+            <button onclick="addReview(this)">Submit</button>
+            <div class="reviews-list"></div>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
