@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Itahari FoodStalls</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Local FoodStalls in Itahari</h1>
+    <p>Promoting Local Taste Through Technology</p>
+</header>
+
+<input type="text" id="search" placeholder="Search foodstall..." onkeyup="searchFoodstall()">
+
+<div class="container" id="foodList">
+
+    <div class="card">
+        <h2>Newa Khaja Ghar</h2>
+        <img src="chatamari.jpg" class="food-img" alt="Chatamari">
+        <p>Address: Itahari Chowk, Itahari, Sunsari</p>
+        <p>Location: Itahari Chowk</p>
+        <p>Phone: <a href="tel:+9779812345678">+977 9812345678</a></p>
+        <h3>Food Items</h3>
+        <div class="food-items">
+            <div class="food-item"><span>Chatamari</span><span class="price">Rs. 100</span></div>
+            <div class="food-item"><span>Bara</span><span class="price">Rs. 80</span></div>
+            <div class="food-item"><span>Momo Fry</span><span class="price">Rs. 150</span></div>
+            <div class="food-item"><span>Chowmein Special</span><span class="price">Rs. 180</span></div>
+            <div class="food-item"><span>Sel Roti</span><span class="price">Rs. 50</span></div>
+            <div class="food-item"><span>Dhido</span><span class="price">Rs. 120</span></div>
+            <div class="food-item"><span>Yomari</span><span class="price">Rs. 90</span></div>
+            <div class="food-item"><span>Kwati</span><span class="price">Rs. 110</span></div>
+            <div class="food-item"><span>Sukuti</span><span class="price">Rs. 200</span></div>
+            <div class="food-item"><span>Buff Sekuwa</span><span class="price">Rs. 250</span></div>
+        </div>
+        <div class="rating">
+            <span onclick="rate(this,0)">☆</span>
+            <span onclick="rate(this,1)">☆</span>
+            <span onclick="rate(this,2)">☆</span>
+            <span onclick="rate(this,3)">☆</span>
+            <span onclick="rate(this,4)">☆</span>
+        </div>
+        <p class="avg-rating">Rating: 0 / 5</p>
+        <div class="review-section">
+            <input type="text" class="review-input" placeholder="Write a review">
+            <button onclick="addReview(this)">Submit</button>
+            <div class="reviews-list"></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Street Momo Center</h2>
+        <img src="momo.jpg" class="food-img" alt="Momo">
+        <p>Address: College Road, Itahari, Sunsari</p>
+        <p>Location: College Road</p>
+        <p>Phone: <a href="tel:+9779823456789">+977 9823456789</a></p>
+        <h3>Food Items</h3>
+        <div class="food-items">
+            <div class="food-item"><span>Buff Momo</span><span class="price">Rs. 120</span></div>
+            <div class="food-item"><span>Chicken Momo</span><span class="price">Rs. 120</span></div>
+            <div class="food-item"><span>Veg Momo</span><span class="price">Rs. 100</span></div>
+            <div class="food-item"><span>Paneer Momo</span><span class="price">Rs. 130</span></div>
+            <div class="food-item"><span>Spinach Momo</span><span class="price">Rs. 110</span></div>
+            <div class="food-item"><span>Cheese Momo</span><span class="price">Rs. 140</span></div>
+            <div class="food-item"><span>Mix Momo</span><span class="price">Rs. 150</span></div>
+            <div class="food-item"><span>Fried Momo</span><span class="price">Rs. 160</span></div>
+            <div class="food-item"><span>Steamed Momo</span><span class="price">Rs. 120</span></div>
+            <div class="food-item"><span>Special Spicy Momo</span><span class="price">Rs. 180</span></div>
+        </div>
+        <div class="rating">
+            <span onclick="rate(this,0)">☆</span>
+            <span onclick="rate(this,1)">☆</span>
+            <span onclick="rate(this,2)">☆</span>
+            <span onclick="rate(this,3)">☆</span>
+            <span onclick="rate(this,4)">☆</span>
+        </div>
+        <p class="avg-rating">Rating: 0 / 5</p>
+        <div class="review-section">
+            <input type="text" class="review-input" placeholder="Write a review">
+            <button onclick="addReview(this)">Submit</button>
+            <div class="reviews-list"></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Lassi Pasal</h2>
+        <img src="lassi.jpg" class="food-img" alt="Lassi">
+        <p>Address: Bus Park, Itahari, Sunsari</p>
+        <p>Location: Bus Park</p>
+        <p>Phone: <a href="tel:+9779834567890">+977 9834567890</a></p>
+        <h3>Food Items</h3>
+        <div class="food-items">
+            <div class="food-item"><span>Sweet Lassi</span><span class="price">Rs. 80</span></div>
+            <div class="food-item"><span>Mango Lassi</span><span class="price">Rs. 90</span></div>
+            <div class="food-item"><span>Banana Lassi</span><span class="price">Rs. 90</span></div>
+            <div class="food-item"><span>Strawberry Lassi</span><span class="price">Rs. 100</span></div>
+            <div class="food-item"><span>Chocolate Lassi</span><span class="price">Rs. 110</span></div>
+            <div class="food-item"><span>Curd Lassi</span><span class="price">Rs. 70</span></div>
+            <div class="food-item"><span>Thick Lassi</span><span class="price">Rs. 85</span></div>
+            <div class="food-item"><span>Cardamom Lassi</span><span class="price">Rs. 95</span></div>
+            <div class="food-item"><span>Special Lassi</span><span class="price">Rs. 120</span></div>
+            <div class="food-item"><span>Mixed Fruit Lassi</span><span class="price">Rs. 130</span></div>
+        </div>
+        <div class="rating">
+            <span onclick="rate(this,0)">☆</span>
+            <span onclick="rate(this,1)">☆</span>
+            <span onclick="rate(this,2)">☆</span>
+            <span onclick="rate(this,3)">☆</span>
+            <span onclick="rate(this,4)">☆</span>
+        </div>
+        <p class="avg-rating">Rating: 0 / 5</p>
+        <div class="review-section">
+            <input type="text" class="review-input" placeholder="Write a review">
+            <button onclick="addReview(this)">Submit</button>
+            <div class="reviews-list"></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Chowmein Corner</h2>
+        <img src="chowmein.jpg" class="food-img" alt="Chowmein">
+        <p>Address: Main Market, Itahari, Sunsari</p>
+        <p>Location: Main Market</p>
+        <p>Phone: <a href="tel:+9779845678901">+977 9845678901</a></p>
+        <h3>Food Items</h3>
+        <div class="food-items">
+            <div class="food-item"><span>Veg Chowmein</span><span class="price">Rs. 100</span></div>
+            <div class="food-item"><span>Chicken Chowmein</span><span class="price">Rs. 120</span></div>
+            <div class="food-item"><span>Buff Chowmein</span><span class="price">Rs. 130</span></div>
+            <div class="food-item"><span>Egg Chowmein</span><span class="price">Rs. 110</span></div>
+            <div class="food-item"><span>Paneer Chowmein</span><span class="price">Rs. 140</span></div>
+            <div class="food-item"><span>Special Chowmein</span><span class="price">Rs. 150</span></div>
+            <div class="food-item"><span>Fried Chowmein</span><span class="price">Rs. 160</span></div>
+            <div class="food-item"><span>Hakka Chowmein</span><span class="price">Rs. 170</span></div>
+            <div class="food-item"><span>Seafood Chowmein</span><span class="price">Rs. 180</span></div>
+            <div class="food-item"><span>Spicy Chowmein</span><span class="price">Rs. 190</span></div>
+        </div>
+        <div class="rating">
+            <span onclick="rate(this,0)">☆</span>
+            <span onclick="rate(this,1)">☆</span>
+            <span onclick="rate(this,2)">☆</span>
+            <span onclick="rate(this,3)">☆</span>
+            <span onclick="rate(this,4)">☆</span>
+        </div>
+        <p class="avg-rating">Rating: 0 / 5</p>
+        <div class="review-section">
+            <input type="text" class="review-input" placeholder="Write a review">
+            <button onclick="addReview(this)">Submit</button>
+            <div class="reviews-list"></div>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
